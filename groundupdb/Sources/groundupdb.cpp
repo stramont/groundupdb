@@ -5,6 +5,6 @@ GroundUpDB::GroundUpDB()
 
 }
 
-Database GroundUpDB::createEmptyDb(std::string &dbname) {
+Database GroundUpDB::createEmptyDB(std::string& dbname) {
     return Database::createEmpty(dbname);
 }

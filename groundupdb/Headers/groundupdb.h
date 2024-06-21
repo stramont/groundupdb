@@ -8,7 +8,7 @@ class GroundUpDB
 {
 public:
     GroundUpDB();
-//24:06 001
+
     static Database createEmptyDB(std::string& dbname);
 };
 
