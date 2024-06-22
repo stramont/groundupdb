@@ -13,7 +13,11 @@ public:
     void setKeyValue(std::string key, std::string value);
     std::string getKeyValue(std::string key);
 
+
+    //management functions
     static Database createEmpty(std::string dbname);
+    static Database load(std::string dbname);
+    void destroy();
 
 protected:
     std::string m_name;

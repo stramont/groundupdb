@@ -34,6 +34,30 @@ TEST_CASE("db-create","[createEmptyDB]") {
         REQUIRE(p == end(p)); // i.e. no contents as iterator is at the end already
         // C++17 Ref: https://en.cppreference.com/w/cpp/filesystem/directory_iterator
 
+        db.destroy();
+        REQUIRE(!fs::is_directory(fs::status(db.getDirectory())));
  
+    }
+}
+
+TEST_CASE("Load an existing database", "[loadDB]") {
+    //Story:-
+    //  [Who]  As a database user
+    //  [What]  I need to create a reference to an existing database
+    //  [Value]  So I can later store and retrieve data
+
+    SECTION("Default settings") {
+        std::string dbname("myemptydb");
+        Database db(GroundUpDB::createEmptyDB(dbname));
+
+        Database db2(GroundUpDB::loadDB(dbname));
+
+        REQUIRE(fs::is_directory(fs::status(db2.getDirectory())));
+
+        const auto& p = fs::directory_iterator(db2.getDirectory());
+        REQUIRE(p == end(p));
+
+        db2.destroy();
+        REQUIRE(!fs::is_directory(fs::status(db2.getDirectory())));
     }
 }

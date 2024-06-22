@@ -17,5 +17,7 @@ TEST_CASE("Store and retrieve a value", "[setKeyValue,getKeyValue]") {
         std::string value("Some highly valuable value");
         db.setKeyValue(key,value);
         REQUIRE(value == db.getKeyValue(key));
+
+        db.destroy();
     }
 }
