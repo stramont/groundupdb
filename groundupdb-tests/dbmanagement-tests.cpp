@@ -3,7 +3,7 @@
 #include <filesystem>
 #include <string>
 
-#include "../../groundupdb/Headers/groundupdb.h"
+#include "../groundupdb/include/groundupdb.h"
 
 namespace fs = std::filesystem;
 

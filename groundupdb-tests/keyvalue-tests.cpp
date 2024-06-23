@@ -1,6 +1,6 @@
 #include "tests.h"
 
-#include "../../groundupdb/Headers/groundupdb.h"
+#include "../groundupdb/include/groundupdb.h"
 
 TEST_CASE("Store and retrieve a value", "[setKeyValue,getKeyValue]") {
     //Story:-
