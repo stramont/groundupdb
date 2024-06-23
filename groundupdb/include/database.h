@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace groundupdb {
+
 class Database 
 {
 public:
@@ -23,5 +25,8 @@ protected:
     std::string m_name;
     std::string m_fullpath;
 };
+
+}
+
 
 #endif

@@ -4,6 +4,8 @@
 #include <string>
 #include "database.h"
 
+namespace groundupdb {
+    
 class GroundUpDB
 {
 public:
@@ -13,5 +15,8 @@ public:
     static Database loadDB(std::string& dbname);
 
 };
+
+}
+
 
 #endif
