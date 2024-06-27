@@ -1,4 +1,4 @@
-#include "tests.h"
+#include "catch.hpp"
 
 #include "../groundupdb/groundupdb.h"
 
